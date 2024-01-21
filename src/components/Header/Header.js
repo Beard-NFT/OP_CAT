@@ -8,7 +8,7 @@ import { Box, Button } from "@mui/material";
 const Header = ({ currentSelection, handleSelection }) => {
   return (
     <>
-      <Box bgcolor="#c24cf6" p={1} display="flex" gap={2}>
+      <Box bgcolor="#c24cf6" p={1} display="flex" gap={2} mb={2}>
         <Button
           variant="contained"
           onClick={() => handleSelection("WHAT_IS_OPCAT")}
