@@ -12,11 +12,11 @@ import {
 /**
  * @desc - Atomic Swap Demo
  */
-const AtomicSwap = () => {
+const AtomicSwap = ({ onComplete }) => {
   const [activeStep, setActiveStep] = useState(0);
 
   const handleComplete = () => {
-    console.log("complete");
+    onComplete();
   };
 
   const handleNext = () => {
@@ -59,7 +59,21 @@ const AtomicSwap = () => {
         <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((label) => (
             <Step key={label}>
-              <StepLabel>{label}</StepLabel>
+              <StepLabel
+                StepIconProps={{
+                  sx: {
+                    color: "#4AF626", // Normal color
+                    "&.Mui-completed": {
+                      color: "#4AF626", // Completed color
+                    },
+                    "&.Mui-active": {
+                      color: "#FF10F0", // Active color
+                    },
+                  },
+                }}
+              >
+                {label}
+              </StepLabel>
             </Step>
           ))}
         </Stepper>
@@ -68,7 +82,7 @@ const AtomicSwap = () => {
         <Box>
           {activeStep === 0 && (
             <>
-              <Typography variant="h5" mt={3} mb={2}>
+              <Typography variant="h5" mt={3} mb={2} color="#FF10F0">
                 Step 1: Creating the Contract
               </Typography>
               <Typography paragraph>
@@ -82,7 +96,7 @@ const AtomicSwap = () => {
           )}
           {activeStep === 1 && (
             <>
-              <Typography variant="h5" mt={3} mb={2}>
+              <Typography variant="h5" mt={3} mb={2} color="#FF10F0">
                 Step 2: Bob Accepts the Contract
               </Typography>
               <Typography paragraph>
@@ -94,7 +108,7 @@ const AtomicSwap = () => {
           )}
           {activeStep === 2 && (
             <>
-              <Typography variant="h5" mt={3} mb={2}>
+              <Typography variant="h5" mt={3} mb={2} color="#FF10F0">
                 Step 3: Completing the Swap
               </Typography>
               <Typography paragraph>

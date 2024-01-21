@@ -19,7 +19,9 @@ const Root = () => {
         handleSelection={handleSelection}
       />
       {selectedComponent === "WHAT_IS_OPCAT" && <WhatIsOPCAT />}
-      {selectedComponent === "ATOMIC_SWAP" && <AtomicSwap />}
+      {selectedComponent === "ATOMIC_SWAP" && (
+        <AtomicSwap onComplete={() => setSelectedComponent("WHAT_IS_OPCAT")} />
+      )}
     </Box>
   );
 };
