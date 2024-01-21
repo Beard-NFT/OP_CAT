@@ -1,11 +1,13 @@
 .backgroundBox {
-  height: 100vh; /* Full viewport height */
+  height: 90svh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
+  max-width: 99.1vw;
   background-image: url("../../img/opcat_bg.png"); /* Path to your image in the public folder */
   background-size: cover;
   background-position: center;
   position: relative; /* Required for the overlay to position itself correctly */
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .backgroundBox::before {
@@ -17,4 +19,5 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
   z-index: -1;
+  overflow-x: hidden;
 }

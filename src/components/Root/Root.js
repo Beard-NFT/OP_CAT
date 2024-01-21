@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import WhatIsOPCAT from "../WhatIsOPCAT/WhatIsOPCAT";
 import "./Root.css";
 import AtomicSwap from "../AtomicSwap/AtomicSwap";
+import Footer from "../Footer/Footer";
 
 const Root = () => {
   const [selectedComponent, setSelectedComponent] = useState("WHAT_IS_OPCAT");
@@ -13,16 +14,21 @@ const Root = () => {
   };
 
   return (
-    <Box className="backgroundBox">
+    <>
       <Header
         currentSelection={selectedComponent}
         handleSelection={handleSelection}
       />
-      {selectedComponent === "WHAT_IS_OPCAT" && <WhatIsOPCAT />}
-      {selectedComponent === "ATOMIC_SWAP" && (
-        <AtomicSwap onComplete={() => setSelectedComponent("WHAT_IS_OPCAT")} />
-      )}
-    </Box>
+      <Box className="backgroundBox" pt={2}>
+        {selectedComponent === "WHAT_IS_OPCAT" && <WhatIsOPCAT />}
+        {selectedComponent === "ATOMIC_SWAP" && (
+          <AtomicSwap
+            onComplete={() => setSelectedComponent("WHAT_IS_OPCAT")}
+          />
+        )}
+      </Box>
+      <Footer />
+    </>
   );
 };
 
