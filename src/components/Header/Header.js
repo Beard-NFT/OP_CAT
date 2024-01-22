@@ -16,6 +16,10 @@ const Header = ({ currentSelection, handleSelection }) => {
             backgroundColor:
               currentSelection === "WHAT_IS_OPCAT" ? "#222" : "#000",
             color: "#4AF626",
+            border:
+              currentSelection === "WHAT_IS_OPCAT"
+                ? "2px solid green"
+                : "2px solid #000",
           }}
         >
           What is OP_CAT?
@@ -30,9 +34,13 @@ const Header = ({ currentSelection, handleSelection }) => {
             backgroundColor:
               currentSelection === "ATOMIC_SWAP" ? "#222" : "#000",
             color: "#4AF626",
+            border:
+              currentSelection === "ATOMIC_SWAP"
+                ? "2px solid green"
+                : "2px solid #000",
           }}
         >
-          Atomic Swap
+          Demo: Atomic Swap
         </Button>
       </Box>
     </>

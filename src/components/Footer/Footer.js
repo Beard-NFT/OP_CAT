@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Divider, Link, Typography } from "@mui/material";
+import xLogo from "../../img/x-logo.png";
 
 const Footer = () => {
+  const X_LOGO_SIZE = "15";
+
   return (
     <Box
       bgcolor="#c24cf6"
@@ -13,20 +16,25 @@ const Footer = () => {
     >
       {/* Team Members Box */}
       <Box display="flex" flexDirection="column">
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" gutterBottom>
           <b>Team Members</b>
         </Typography>
-        <Box display="flex" flexDirection="row" gap={1}>
+        <Box display="flex" flexDirection="row" gap={1} alignItems="center">
           <Link href="#" color="inherit" underline="none">
             Oatplan
           </Link>{" "}
           |
           <Link
             href="https://twitter.com/0xB3ARD"
+            target="_blank"
+            rel="noopener noreferrer"
             color="inherit"
             underline="none"
           >
-            Chimpy
+            <Box display="flex" alignItems="center" gap={1}>
+              Chimpy
+              <img src={xLogo} height={X_LOGO_SIZE} width={X_LOGO_SIZE} />
+            </Box>
           </Link>{" "}
           |
           <Link href="#" color="inherit" underline="none">
@@ -35,10 +43,20 @@ const Footer = () => {
           |
           <Link
             href="https://twitter.com/NFT_G0SS1P"
+            target="_blank"
+            rel="noopener noreferrer"
             color="inherit"
             underline="none"
           >
-            efick
+            <Box display="flex" alignItems="center" gap={1}>
+              efick
+              <img
+                src={xLogo}
+                height={X_LOGO_SIZE}
+                width={X_LOGO_SIZE}
+                alt="X Logo"
+              />
+            </Box>
           </Link>{" "}
           |
           <Link href="#" color="inherit" underline="none">
@@ -51,7 +69,7 @@ const Footer = () => {
 
       {/* Other Links Box */}
       <Box>
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" gutterBottom>
           <b>Other Links</b>
         </Typography>
         <Box>
@@ -62,7 +80,10 @@ const Footer = () => {
             color="inherit"
             underline="none"
           >
-            QuantumCatsXYZ
+            <Box display="flex" alignItems="center" gap={1}>
+              QuantumCatsXYZ
+              <img src={xLogo} height={X_LOGO_SIZE} width={X_LOGO_SIZE} />
+            </Box>
           </Link>
         </Box>
       </Box>

@@ -21,10 +21,12 @@ const WhatIsOPCAT = () => {
       <Paper
         style={{
           maxWidth: 800,
+          maxHeight: "64vh",
           padding: 16,
           marginTop: 16,
           color: "#4AF626",
           backgroundColor: "black",
+          overflowY: "scroll",
         }}
       >
         <Typography variant="h5" gutterBottom color="#FF10F0">
@@ -38,13 +40,41 @@ const WhatIsOPCAT = () => {
         </Typography>
 
         <Typography variant="h5" gutterBottom color="#FF10F0">
-          Historical Context
+          How to Use OP_CAT
         </Typography>
         <Typography paragraph>
-          In the early days of Bitcoin, OP_CAT was part of the script, allowing
-          users to combine data in innovative ways. However, as Bitcoin evolved,
-          the need for a more secure and stable environment led to its
-          deprecation.
+          Imagine you're crafting a Bitcoin transaction and you want to combine
+          two pieces of data within a script. In the early days of Bitcoin, you
+          could have used OP_CAT for this purpose.
+        </Typography>
+        <Box bgcolor="orange">
+          <Typography paragraph>
+            Suppose you have two strings: the first string is the hex
+            representation of "Hello" (48656C6C6F) and the second string is
+            "World" (576F726C64). To concatenate these strings within a Bitcoin
+            script, you would use OP_CAT like this:
+          </Typography>
+        </Box>
+        <Typography paragraph>
+          <code>
+            OP_PUSHDATA 48656C6C6F // Pushes the hex representation of "Hello"
+            onto the stack <br />
+            OP_PUSHDATA 576F726C64 // Pushes the hex representation of "World"
+            onto the stack <br />
+            OP_CAT // Concatenates the two topmost items on the stack <br />
+          </code>
+        </Typography>
+        <Typography paragraph>
+          After executing OP_CAT, the stack would have a single item: the
+          concatenated string (48656C6C6F576F726C64), which represents
+          "HelloWorld".
+        </Typography>
+        <Typography paragraph>
+          This opcode was particularly useful in scripts that needed to combine
+          various data elements dynamically. However, due to potential security
+          concerns, OP_CAT was disabled. It serves as an interesting part of
+          Bitcoin's history, showcasing the evolution of its scripting
+          capabilities.
         </Typography>
 
         <Typography variant="h5" gutterBottom color="#FF10F0">
