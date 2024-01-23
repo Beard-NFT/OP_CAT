@@ -47,7 +47,7 @@ const WhatIsOPCAT = () => {
           two pieces of data within a script. In the early days of Bitcoin, you
           could have used OP_CAT for this purpose.
         </Typography>
-        <Box bgcolor="orange">
+        <Box>
           <Typography paragraph>
             Suppose you have two strings: the first string is the hex
             representation of "Hello" (48656C6C6F) and the second string is
@@ -55,7 +55,13 @@ const WhatIsOPCAT = () => {
             script, you would use OP_CAT like this:
           </Typography>
         </Box>
-        <Typography paragraph>
+        <Typography
+          paragraph
+          bgcolor="#FF10F0"
+          color="black"
+          p={1}
+          borderRadius="6px"
+        >
           <code>
             OP_PUSHDATA 48656C6C6F // Pushes the hex representation of "Hello"
             onto the stack <br />

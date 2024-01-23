@@ -27,7 +27,6 @@ const Header = ({ currentSelection, handleSelection }) => {
         <Button
           variant="contained"
           onClick={() => {
-            console.log("test");
             handleSelection("ATOMIC_SWAP");
           }}
           sx={{
@@ -41,6 +40,40 @@ const Header = ({ currentSelection, handleSelection }) => {
           }}
         >
           Demo: Atomic Swap
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            handleSelection("OPCAT_AND_ORDINALS");
+          }}
+          sx={{
+            backgroundColor:
+              currentSelection === "OPCAT_AND_ORDINALS" ? "#222" : "#000",
+            color: "#4AF626",
+            border:
+              currentSelection === "OPCAT_AND_ORDINALS"
+                ? "2px solid green"
+                : "2px solid #000",
+          }}
+        >
+          OP_CAT And Ordinals?
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            handleSelection("OPCAT_CONCERNS");
+          }}
+          sx={{
+            backgroundColor:
+              currentSelection === "OPCAT_CONCERNS" ? "#222" : "#000",
+            color: "#4AF626",
+            border:
+              currentSelection === "OPCAT_CONCERNS"
+                ? "2px solid green"
+                : "2px solid #000",
+          }}
+        >
+          Concerns with OP_CAT
         </Button>
       </Box>
     </>

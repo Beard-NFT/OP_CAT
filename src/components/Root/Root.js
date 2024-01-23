@@ -5,6 +5,8 @@ import WhatIsOPCAT from "../WhatIsOPCAT/WhatIsOPCAT";
 import "./Root.css";
 import AtomicSwap from "../AtomicSwap/AtomicSwap";
 import Footer from "../Footer/Footer";
+import OpcatAndOrdinals from "../OpcatAndOrdinals/OpcatAndOrdinals";
+import OpcatConcerns from "../OpcatConcerns.js/OpcatConcerns";
 
 const Root = () => {
   const [selectedComponent, setSelectedComponent] = useState("WHAT_IS_OPCAT");
@@ -26,6 +28,12 @@ const Root = () => {
             onComplete={() => setSelectedComponent("WHAT_IS_OPCAT")}
           />
         )}
+        {selectedComponent === "OPCAT_AND_ORDINALS" && (
+          <OpcatAndOrdinals
+            onComplete={() => setSelectedComponent("WHAT_IS_OPCAT")}
+          />
+        )}
+        {selectedComponent === "OPCAT_CONCERNS" && <OpcatConcerns />}
       </Box>
       <Footer />
     </>
