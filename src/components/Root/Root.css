@@ -21,3 +21,22 @@
   z-index: -1;
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* The track of the scrollbar, where the bar hasn't reached */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4af626; /* The scroll thumb, the part that you drag */
+  border-radius: 6px; /* Roundness of the scroll thumb */
+  border: 3px solid #000; /* Creates a border around the scroll thumb */
+}
+
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #4af626 #000; /* thumb and track colors */
+}

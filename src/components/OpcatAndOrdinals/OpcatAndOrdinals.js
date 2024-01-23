@@ -40,7 +40,7 @@ const OpcatAndOrdinals = ({ onComplete }) => {
       color="#4AF626"
     >
       <Typography variant="h2" color="#4deeea">
-        <b>Atomic Swap Demo</b>
+        <b>OP_CAT & Ordinals?</b>
       </Typography>
 
       <Box
