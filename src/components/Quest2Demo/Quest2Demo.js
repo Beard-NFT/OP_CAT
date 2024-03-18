@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import DisplayCode from "./DisplayCode";
 import DisplayCat from "./DisplayCat";

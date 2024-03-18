@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import layer1 from "../../quantum_cat_layers/layer1.png";
 import layer2 from "../../quantum_cat_layers/layer2.png";
