@@ -44,7 +44,13 @@ const Quest2Demo = () => {
         </Typography>
       </Box>
       {/* This split box will display some kind of stepper on the left and an opcat on the right */}
-      <Box display="flex" width="100%" justifyContent="space-between" gap={1}>
+      <Box
+        display="flex"
+        width="100%"
+        alignItems="center"
+        gap={1}
+        flexDirection="column"
+      >
         <Box
           border="2px solid #4AF626"
           borderRadius="6px"
@@ -53,8 +59,10 @@ const Quest2Demo = () => {
           flexGrow={1}
           justifyContent="space-between"
           p={2}
+          width="100%"
         >
           <DisplayCode currentStep={currentStep} />
+
           <DisplayCodeExplanation
             currentStep={currentStep}
             onBackClick={decrementStep}

@@ -11,6 +11,8 @@ const DisplayCodeExplanation = ({ currentStep, onBackClick, onNextClick }) => {
     `Just like line 2, line 6 returns an error message, letting you know that the size was exceeded and will not continue executing the code. You have dropped the apples from your hands. Oh no!`,
     `Line 7 will be executed to concatenate (a fancy word for linking or joining something together) VCH2 to VCH1. In other words, line 7 takes the entire content of VCH2 and appends it to VCH1, effectively joining them together. With the force of 1000 giants, you take an apple in each hand and CRUSH them together, combining them into a juicy apple ball.`,
     `Line 8 REMOVES VCH2 because the content was put in VCH1. Having combined your apples into one hand, you can drop your other hand and let it rest.`,
+
+    `Thank you for learning about the OP_CAT code! Explore the rest of the website to continue your OP_CAT journey. Also, please follow the Quantum Cats X page here:`,
   ];
 
   return (
