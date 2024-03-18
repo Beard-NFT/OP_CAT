@@ -1,15 +1,15 @@
 .backgroundBox {
-  height: 90svh; /* Full viewport height */
+  height: 90vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
   max-width: 99.1vw;
   background-image: url("../../img/opcat_bg.png"); /* Path to your image in the public folder */
-  background-size: cover;
+  background-size: contain; /* Adjusts the size of the background image */
+  background-repeat: repeat; /* Makes the background image repeat */
   background-position: center;
   position: relative; /* Required for the overlay to position itself correctly */
   z-index: 1;
   overflow-x: hidden;
 }
-
 .backgroundBox::before {
   content: "";
   position: absolute;

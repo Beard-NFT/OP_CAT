@@ -26,6 +26,21 @@ const Header = ({ currentSelection, handleSelection }) => {
         </Button>
         <Button
           variant="contained"
+          onClick={() => handleSelection("QUEST_2_DEMO")}
+          sx={{
+            backgroundColor:
+              currentSelection === "QUEST_2_DEMO" ? "#222" : "#000",
+            color: "#4AF626",
+            border:
+              currentSelection === "QUEST_2_DEMO"
+                ? "2px solid green"
+                : "2px solid #000",
+          }}
+        >
+          OP_CAT CODE EXPLAINED
+        </Button>
+        <Button
+          variant="contained"
           onClick={() => {
             handleSelection("ATOMIC_SWAP");
           }}
