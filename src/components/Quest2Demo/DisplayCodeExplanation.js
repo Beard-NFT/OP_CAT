@@ -3,15 +3,14 @@ import React from "react";
 
 const DisplayCodeExplanation = ({ currentStep, onBackClick, onNextClick }) => {
   const DESCRIPTIONS = [
-    `Checks if there are at least two items on the stack. The command requires two items to concatenate (join together).`,
-    `If there aren't two items on the stack, this line returns an error, indicating that the operation is invalid because it needs two items to work.`,
-    `Gets the second-to-last item from the stack and stores it in vch1. In stack operations, the top of the stack is considered the last item, so -2 refers to the item just below the top.`,
-    `Retrieves the last item from the stack and stores it in vch2. This is the item at the top of the stack.`,
-    `Checks if the total size of the two items to be concatenated exceeds the maximum allowed size. This is a safety check to prevent overly large data operations that could burden the system.`,
-    `If the combined size of the two items is too large, it returns an error, indicating that the operation cannot proceed due to size limitations.`,
-    `Concatenates vch2 to the end of vch1. It takes the entire content of vch2 and appends it to vch1, effectively joining them together.`,
-    `Removes the last item (vch2) from the stack since its content has already been added to vch1. This leaves the stack with the newly concatenated item at the top.`,
-    `Thank you for learning about the OP_CAT code! Explore the rest of the website to continue your OP_CAT journey. Also, please follow the Quantum Cats X page here:`,
+    `The word “STACK” comes from the word “STAKKR” of Germanic origin, meaning "haystack". So just as you can’t make a haystack out of one straw, the 1st line of code checks if there are more than one item on the stack. If the size is less than two, the return in line 2 will take place.`,
+    `The 2nd line of code clarifies this by returning an error and stopping the execution of the code.`,
+    `If the error does not show up, the code will proceed, and then the 3rd line of the code will execute a “grab”, taking the item just below the top. It is represented by the “-2” in parentheses, with -1 being the top item. VCH1 is a name of the place where the item can be stored, like grabbing an apple and holding it in one hand, or storing a file on your computer!`,
+    `Working similarly to the 3rd line, the 4th line takes the TOP item “(-1)” and stores it in VCH2. Imagine your right hand, or another folder on your computer.`,
+    `The 5th line of the code ensures that the two items do not exceed a certain size. Imagine holding 1 apple in each hand. You know the size of your hand, and you understand that holding too many apples of a certain size would be impossible. The line checks to make sure the combined items' size doesn’t burden the system. If the size is not under the limit, an error is returned.`,
+    `Just like line 2, line 6 returns an error message, letting you know that the size was exceeded and will not continue executing the code. You have dropped the apples from your hands. Oh no!`,
+    `Line 7 will be executed to concatenate (a fancy word for linking or joining something together) VCH2 to VCH1. In other words, line 7 takes the entire content of VCH2 and appends it to VCH1, effectively joining them together. With the force of 1000 giants, you take an apple in each hand and CRUSH them together, combining them into a juicy apple ball.`,
+    `Line 8 REMOVES VCH2 because the content was put in VCH1. Having combined your apples into one hand, you can drop your other hand and let it rest.`,
   ];
 
   return (
