@@ -45,9 +45,6 @@ const Footer = () => {
               />
             </Box>
           </Link>
-          {/* <Link href="#" color="inherit" underline="none">
-            Oatplan
-          </Link>{" "} */}
           |
           <Link
             href="https://twitter.com/0xB3ARD"
@@ -66,10 +63,6 @@ const Footer = () => {
               />
             </Box>
           </Link>{" "}
-          {/* |
-          <Link href="#" color="inherit" underline="none">
-            357
-          </Link>{" "} */}
           |
           <Link
             href="https://twitter.com/NFT_G0SS1P"
@@ -88,10 +81,40 @@ const Footer = () => {
               />
             </Box>
           </Link>{" "}
-          {/* |
-          <Link href="#" color="inherit" underline="none">
-            towfooh
-          </Link> */}
+          |
+          <Link
+            href="https://twitter.com/oatplan"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit"
+            underline="none"
+          >
+            Oatplan{" "}
+            <img
+              src={xLogo}
+              height={X_LOGO_SIZE}
+              width={X_LOGO_SIZE}
+              alt="Twitter"
+            />
+          </Link>{" "}
+          |
+          <Link
+            href="https://twitter.com/towfooh"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit"
+            underline="none"
+          >
+            <Box display="flex" alignItems="center" gap={1}>
+              towfooh
+              <img
+                src={xLogo}
+                height={X_LOGO_SIZE}
+                width={X_LOGO_SIZE}
+                alt="Twitter"
+              />
+            </Box>
+          </Link>
         </Box>
       </Box>
 
