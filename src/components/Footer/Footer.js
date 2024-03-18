@@ -17,12 +17,37 @@ const Footer = () => {
       {/* Team Members Box */}
       <Box display="flex" flexDirection="column">
         <Typography variant="subtitle1" gutterBottom>
-          <b>Team Members</b>
+          <b>
+            <em>Team Members</em>
+          </b>
         </Typography>
-        <Box display="flex" flexDirection="row" gap={1} alignItems="center">
-          <Link href="#" color="inherit" underline="none">
+        <Box
+          display="flex"
+          flexDirection="row"
+          gap={1}
+          alignItems="center"
+          fontWeight="bold"
+        >
+          <Link
+            href="https://twitter.com/levocor"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit"
+            underline="none"
+          >
+            <Box display="flex" alignItems="center" gap={1}>
+              Levecor
+              <img
+                src={xLogo}
+                height={X_LOGO_SIZE}
+                width={X_LOGO_SIZE}
+                alt="Twitter"
+              />
+            </Box>
+          </Link>
+          {/* <Link href="#" color="inherit" underline="none">
             Oatplan
-          </Link>{" "}
+          </Link>{" "} */}
           |
           <Link
             href="https://twitter.com/0xB3ARD"
@@ -33,13 +58,18 @@ const Footer = () => {
           >
             <Box display="flex" alignItems="center" gap={1}>
               Chimpy
-              <img src={xLogo} height={X_LOGO_SIZE} width={X_LOGO_SIZE} />
+              <img
+                src={xLogo}
+                height={X_LOGO_SIZE}
+                width={X_LOGO_SIZE}
+                alt="Twitter"
+              />
             </Box>
           </Link>{" "}
-          |
+          {/* |
           <Link href="#" color="inherit" underline="none">
             357
-          </Link>{" "}
+          </Link>{" "} */}
           |
           <Link
             href="https://twitter.com/NFT_G0SS1P"
@@ -49,19 +79,19 @@ const Footer = () => {
             underline="none"
           >
             <Box display="flex" alignItems="center" gap={1}>
-              efick
+              ef1ck
               <img
                 src={xLogo}
                 height={X_LOGO_SIZE}
                 width={X_LOGO_SIZE}
-                alt="X Logo"
+                alt="Twitter"
               />
             </Box>
           </Link>{" "}
-          |
+          {/* |
           <Link href="#" color="inherit" underline="none">
             towfooh
-          </Link>
+          </Link> */}
         </Box>
       </Box>
 
@@ -70,8 +100,11 @@ const Footer = () => {
       {/* Other Links Box */}
       <Box>
         <Typography variant="subtitle1" gutterBottom>
-          <b>Other Links</b>
+          <b>
+            <em>Other Links</em>
+          </b>
         </Typography>
+
         <Box>
           <Link
             href="https://twitter.com/QuantumCatsXYZ"
@@ -79,10 +112,16 @@ const Footer = () => {
             rel="noopener noreferrer"
             color="inherit"
             underline="none"
+            fontWeight="bold"
           >
             <Box display="flex" alignItems="center" gap={1}>
               QuantumCatsXYZ
-              <img src={xLogo} height={X_LOGO_SIZE} width={X_LOGO_SIZE} />
+              <img
+                src={xLogo}
+                height={X_LOGO_SIZE}
+                width={X_LOGO_SIZE}
+                alt="Twitter"
+              />
             </Box>
           </Link>
         </Box>
